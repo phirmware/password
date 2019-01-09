@@ -1,0 +1,26 @@
+{
+    "name": "Password",
+    "short_name": "Password",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "/img/favicon.png",
+        "sizes": "36x36",
+        "type": "image/png"
+      },
+      {
+        "src": "/img/favicon.png",
+        "sizes": "48x48",
+        "type": "image/png"
+      },
+      {
+        "src": "/img/favicon.png",
+        "sizes": "60x60",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#ffcd8e",
+    "display": "standalone",
+    "orientation": "any"
+  }
