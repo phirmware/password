@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    background: #fbfbfb;
+    font-family: "Nunito", "Varela Round", sans-serif;
+    font-size: 1.2em;
+}
+
+.btn-success {
+    background: #ffcd8e;
+    border: 1px solid #ffcd8e;
+    line-height: 2em;
+    padding: 0 10px 0 10px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #5b4328;
+}
+
+.by p {
+    margin: 0;
+    vertical-align: middle;
+    display: inline;
+    margin-left: 0.5em;
+    font-weight: 400;
+}
+
+.by:hover {
+    background: #efefef !important;
+}
+
+.container {
+    align-content: center;
+    margin: 0px auto;
+    width: 100%;
+}
+
+.storedPassword p {
+    margin: 0 0 10px;
+    color: slategray;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 14px auto;
+    display: block;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    padding: 42px;
+    background: #fff;
+    width: calc(100% - 14px);
+}
+
+.storedPassword h5 {
+    font-size: 15px;
+    font-family: monospace;
+    word-wrap: break-word;
+}
+
+.container h2 {
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #3f3b58;
+    font-size: 2em;
+}
+
+.by {
+    text-decoration: none;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 71, 66);
+    color: #fff;
+    position: fixed;
+    font-weight: 500;
+    z-index: 8;
+    border-top-left-radius: 5px;
+    padding: 0.5em;
+    border-top: 1px solid #efefef;
+    font-weight: 800;
+    border-left: 1px solid #efefef;
+    background: #fff;
+    color: #6f6f6f;
+}
+
+.by img {
+    border-radius: 2em;
+    width: 1.5em;
+    vertical-align: middle;
+}
+
+.intro {
+    font-family: "Nunito", "Varela Round", sans-serif;
+    color: #3f3b58;
+    font-weight: 800;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+@media(max-width:800px) {
+    .intro {
+        text-align: center;
+        margin-left: -14px;
+        margin-right: -14px;
+    }
+    img.pic {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 28px;
+        margin-right: -50px;
+    }
+}
+
+@media(max-width:335px){
+    img .pic{
+        width: 100%;
+    }
+}
+
+img.pic {
+    width: 300px;
+    margin-left: 14px;
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+}
+
+.passwordBox {
+    height: auto;
+    margin-bottom: 8px;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.hide {
+    display: none;
+    transition: 2s;
+}
+
+.storedPassword {
+    background: #fff;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.form-control {
+    border-radius: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #ededed;
+    background: #fff;
+    color: #3f3b58;
+    box-shadow: none;
+    padding: 7px;
+    margin-right: 14px;
+    font-weight: bold;
+}
+
+#btn-container {
+    width: 60%;
+}
+
+@media(max-width:560px) {
+    #btn-container {
+        width: 100%;
+    }
+    .btn {
+        display: block;
+    }
+    #lockscreen {
+        margin-top: 10vh;
+    }
+}

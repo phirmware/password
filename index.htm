@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Passwords</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+    <link rel="stylesheet" href="animate.min.css">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <div class="1st container">
+      <div class="row">
+        <div class="jumbotron" style="background:transparent">
+          <h2 class="text-center" style="font: weight 800;font-size:3rem">
+            Passwords <br />
+            <br />
+        </h2>
+        <img src="img/favicon.png" class="pic" alt="lock">
+        <br>
+        <p class="intro" style="margin-top: 28px;font-weight:800">
+                Having a problem remembering passwords?, You can now have multiple accounts on 
+                a website without having to worry about username, email and password combinations.
+                This app stores all your passwords inside your device to be accessed anytime you want it,
+                there is no database and the app works offline.
+            </p>
+        </div>
+        <div id="btn-container" class="text-center" style="margin:0px auto">
+          <button id="addPassword" class="btn btn-success">Add a Password</button>
+          <button id="getPasswords" class="btn btn-success hide">Show Passwords</button>
+          <button id="lock" class="btn btn-success">Lock App</button>
+          <button id="clearPasswords" class="btn btn-success">Clear Passwords</button>
+        </div>
+      </div>
+    </div>
+    <div id="addPasswordContainer" class="1st container hide">
+      <div class="row">
+        <div class="col-lg-4 col-md-4"></div>
+        <div class="col-lg-4 col-md-4">
+          <form class="form-group animated fadeIn" id="form">
+            <input
+            required
+              type="text"
+              id="site"
+              placeholder="Website Name"
+              class="form-control"
+            />
+            <br />
+            <input
+            required
+              type="text"
+              id="username"
+              placeholder="username / email"
+              class="form-control"
+            />
+            <br />
+            <input
+            required
+              type="text"
+              id="password"
+              placeholder="password"
+              class="form-control"
+            />
+            <br />
+            <input
+              type="submit"
+              id="submit"
+              value="Store"
+              class="btn btn-success btn-large btn-block"
+            />
+          </form>
+        </div>
+        <div class="col-lg-4 col-md-4"></div>
+      </div>
+    </div>
+    <div id="showPasswordContainer" class="1st container">
+      <div id="know" class="row animated fadeIn">
+        <!-- <div class="col-lg-3 col-md-4  passwordBox">
+          <div class="storedPassword">
+              <p>Chrome</p>
+              <h5>phirmware</h5>
+              <h5>itachi1</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 passwordBox">
+          <div class="storedPassword">
+                <p>Chrome</p>
+                <h5>phirmware</h5>
+                <h5>itachi1</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 passwordBox">
+          <div class="storedPassword">
+                <p>Chrome</p>
+                <h5>phirmware</h5>
+                <h5>itachi1</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 passwordBox">
+          <div class="storedPassword">
+                <p>Chrome</p>
+                <h5>phirmware</h5>
+                <h5>itachi1</h5>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="container hide" id="credentials">
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4"></div>
+            <div class="col-lg-4 col-md-4">
+                <h4 id="unlockinfo" class="text-center">Unlock App</h4>
+                <h5 id="lockinfo" class="text-center hide">Choose Username and Password</h5>
+                    <form class="form-group animated fadeIn">
+                            <input
+                            required
+                              type="text"
+                              id="siteusername"
+                              placeholder="username"
+                              class="form-control"
+                            />
+                            <br />
+                            <input
+                            required
+                              type="password"
+                              id="sitepassword"
+                              placeholder="password"
+                              class="form-control"
+                            />
+                            <br />
+                            <input
+                              type="submit"
+                              id="sitesubmit"
+                              value="Submit"
+                              class="btn btn-success btn-large btn-block"
+                            />
+                          </form>
+            </div>
+            <div class="col-lg-4 col-md-4"></div>
+        </div>
+    </div>
+    <div class="container hide" id="lockscreen">
+        <div class="row">
+            <div class="col-lg-3 col-md-3"></div>
+            <div class="col-lg-6 col-md-6">
+                <h3 class="text-center">
+                    <img src="img/favicon.ico"  alt="lock">
+                    <br>
+                    <br>
+                  APP LOCKED
+                </h3>
+                <br>
+                <br>
+                <button id="unlock" class="btn btn-primary btn-block btn-large">Unlock</button>
+            </div>
+            <div class="col-lg-3 col-md-3"></div>
+        </div>
+    </div>
+    <a href="https://twitter.com/phirmware" target="blank" class="by">
+        <img src="img/original.jpeg" alt="">
+       <p>by Phirmware</p>
+    </a>
+    <script>
+      if(navigator.serviceWorker){
+        navigator.serviceWorker.register('sw.js').then(reg=>{
+          console.log('Registeration Worked!');
+        }).catch(err=>{
+          console.log('Failed to register!');
+        });
+      }
+    </script>
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
