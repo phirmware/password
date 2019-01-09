@@ -5,11 +5,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="bootstrap.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
-    <link rel="stylesheet" href="animate.min.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+    />
+    <link rel="stylesheet" href="animate.min.css" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="img/favicon.ico">
+    <link
+      rel="image_src"
+      href="img/favicon.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@phirmware" />
+    <meta name="twitter:creator" content="@phirmware" />
+    <meta name="twitter:title" content="Passwords" />
+    <meta
+      name="twitter:description"
+      content=" Having a problem remembering passwords?, You can now have multiple
+      accounts on a website without having to worry about username, email
+      and password combinations. This app stores all your passwords inside
+      your device to be accessed anytime you want it, the app works offline."
+    />
+    <meta
+      name="twitter:image:src"
+      content="img/favicon.png"
+    />
+    <meta
+      name="twitter:url"
+      content="https://phirmware.gihub.io/password"
+    />
+    <meta property="og:title" content="Passwords" />
+    <meta property="og:url" content="htps://phirmware.github.io/password" />
+    <meta
+      property="og:description"
+      content=" Having a problem remembering passwords?, You can now have multiple
+      accounts on a website without having to worry about username, email
+      and password combinations. This app stores all your passwords inside
+      your device to be accessed anytime you want it, the app works offline."
+    />
+    <meta
+      property="og:image"
+      content="img/favicon.png"
+    />
+    <meta property="og:site_name" content="Passwords" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="img/favicon.ico" />
   </head>
   <body>
     <div class="1st container">
@@ -18,21 +60,26 @@
           <h2 class="text-center" style="font: weight 800;font-size:3rem">
             Passwords <br />
             <br />
-        </h2>
-        <img src="img/favicon.png" class="pic" alt="lock">
-        <br>
-        <p class="intro" style="margin-top: 28px;font-weight:800">
-                Having a problem remembering passwords?, You can now have multiple accounts on 
-                a website without having to worry about username, email and password combinations.
-                This app stores all your passwords inside your device to be accessed anytime you want it,
-                there is no database and the app works offline.
-            </p>
+          </h2>
+          <img src="img/favicon.png" class="pic" alt="lock" /> <br />
+          <p class="intro" style="margin-top: 28px;font-weight:800">
+            Having a problem remembering passwords?, You can now have multiple
+            accounts on a website without having to worry about username, email
+            and password combinations. This app stores all your passwords inside
+            your device to be accessed anytime you want it, the app works offline.
+          </p>
         </div>
         <div id="btn-container" class="text-center" style="margin:0px auto">
-          <button id="addPassword" class="btn btn-success">Add a Password</button>
-          <button id="getPasswords" class="btn btn-success hide">Show Passwords</button>
+          <button id="addPassword" class="btn btn-success">
+            Add a Password
+          </button>
+          <button id="getPasswords" class="btn btn-success hide">
+            Show Passwords
+          </button>
           <button id="lock" class="btn btn-success">Lock App</button>
-          <button id="clearPasswords" class="btn btn-success">Clear Passwords</button>
+          <button id="clearPasswords" class="btn btn-success">
+            Clear Passwords
+          </button>
         </div>
       </div>
     </div>
@@ -42,7 +89,7 @@
         <div class="col-lg-4 col-md-4">
           <form class="form-group animated fadeIn" id="form">
             <input
-            required
+              required
               type="text"
               id="site"
               placeholder="Website Name"
@@ -50,7 +97,7 @@
             />
             <br />
             <input
-            required
+              required
               type="text"
               id="username"
               placeholder="username / email"
@@ -58,7 +105,7 @@
             />
             <br />
             <input
-            required
+              required
               type="text"
               id="password"
               placeholder="password"
@@ -109,70 +156,74 @@
       </div>
     </div>
     <div class="container hide" id="credentials">
-        <div class="row">
-
+      <div class="row"></div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4"></div>
+        <div class="col-lg-4 col-md-4">
+          <h4 id="unlockinfo" class="text-center">Unlock App</h4>
+          <h5 id="lockinfo" class="text-center hide">
+            Choose Username and Password
+          </h5>
+          <form class="form-group animated fadeIn">
+            <input
+              required
+              type="text"
+              id="siteusername"
+              placeholder="username"
+              class="form-control"
+            />
+            <br />
+            <input
+              required
+              type="password"
+              id="sitepassword"
+              placeholder="password"
+              class="form-control"
+            />
+            <br />
+            <input
+              type="submit"
+              id="sitesubmit"
+              value="Submit"
+              class="btn btn-success btn-large btn-block"
+            />
+          </form>
         </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-4"></div>
-            <div class="col-lg-4 col-md-4">
-                <h4 id="unlockinfo" class="text-center">Unlock App</h4>
-                <h5 id="lockinfo" class="text-center hide">Choose Username and Password</h5>
-                    <form class="form-group animated fadeIn">
-                            <input
-                            required
-                              type="text"
-                              id="siteusername"
-                              placeholder="username"
-                              class="form-control"
-                            />
-                            <br />
-                            <input
-                            required
-                              type="password"
-                              id="sitepassword"
-                              placeholder="password"
-                              class="form-control"
-                            />
-                            <br />
-                            <input
-                              type="submit"
-                              id="sitesubmit"
-                              value="Submit"
-                              class="btn btn-success btn-large btn-block"
-                            />
-                          </form>
-            </div>
-            <div class="col-lg-4 col-md-4"></div>
-        </div>
+        <div class="col-lg-4 col-md-4"></div>
+      </div>
     </div>
     <div class="container hide" id="lockscreen">
-        <div class="row">
-            <div class="col-lg-3 col-md-3"></div>
-            <div class="col-lg-6 col-md-6">
-                <h3 class="text-center">
-                    <img src="img/favicon.ico"  alt="lock">
-                    <br>
-                    <br>
-                  APP LOCKED
-                </h3>
-                <br>
-                <br>
-                <button id="unlock" class="btn btn-primary btn-block btn-large">Unlock</button>
-            </div>
-            <div class="col-lg-3 col-md-3"></div>
+      <div class="row">
+        <div class="col-lg-3 col-md-3"></div>
+        <div class="col-lg-6 col-md-6">
+          <h3 class="text-center">
+            <img src="img/favicon.ico" alt="lock" /> <br />
+            <br />
+            APP LOCKED
+          </h3>
+          <br />
+          <br />
+          <button id="unlock" class="btn btn-primary btn-block btn-large">
+            Unlock
+          </button>
         </div>
+        <div class="col-lg-3 col-md-3"></div>
+      </div>
     </div>
     <a href="https://twitter.com/phirmware" target="blank" class="by">
-        <img src="img/original.jpeg" alt="">
-       <p>by Phirmware</p>
+      <img src="img/original.jpeg" alt="" />
+      <p>by Phirmware</p>
     </a>
     <script>
-      if(navigator.serviceWorker){
-        navigator.serviceWorker.register('sw.js').then(reg=>{
-          console.log('Registeration Worked!');
-        }).catch(err=>{
-          console.log('Failed to register!');
-        });
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then(reg => {
+            console.log("Registeration Worked!");
+          })
+          .catch(err => {
+            console.log("Failed to register!");
+          });
       }
     </script>
     <script src="jquery.min.js"></script>
