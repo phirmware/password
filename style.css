@@ -112,8 +112,8 @@ body {
     }
 }
 
-@media(max-width:335px){
-    img .pic{
+@media(max-width:335px) {
+    img .pic {
         width: 100%;
     }
 }

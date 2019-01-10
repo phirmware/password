@@ -220,6 +220,12 @@
           .register("sw.js")
           .then(reg => {
             console.log("Registeration Worked!");
+            if(reg.waiting){
+              console.log('SW waiting! Send message');
+              reg.installing.postMessage({action:'Update'});
+              reg.active.postMessage({action:'Update'});
+              reg.waiting.postMessage({action:'Update'});
+            }
           })
           .catch(err => {
             console.log("Failed to register!");
