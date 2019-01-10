@@ -1,4 +1,4 @@
-var staticCacheName = "password-static-v1";
+var staticCacheName = "password-static-v3";
 
 self.addEventListener("install", event => {
   event.waitUntil(
@@ -10,6 +10,7 @@ self.addEventListener("install", event => {
         "style.css",
         "animate.min.css",
         "bootstrap.min.css",
+        "sweetalert.min.js",
         "jquery.min.js",
         "img/favicon.ico",
         "img/favicon.png",
