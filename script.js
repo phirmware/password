@@ -116,7 +116,7 @@ $("#sitesubmit").click(e => {
         $('#siteusername').val('');
         $('#sitepassword').val('');
       } else{
-          alert('Incorrect Login');
+          swal('Incorrect Login Details!');
       }
   }
 });

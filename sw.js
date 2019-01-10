@@ -1,4 +1,4 @@
-var staticCacheName = "password-static-v3";
+var staticCacheName = "password-static-v1";
 
 self.addEventListener("install", event => {
   event.waitUntil(
@@ -6,6 +6,7 @@ self.addEventListener("install", event => {
       cache.addAll([
         "index.htm",
         "script.js",
+        "app.js",
         "style.css",
         "animate.min.css",
         "bootstrap.min.css",
@@ -29,6 +30,7 @@ self.addEventListener("fetch", event => {
   );
 });
 
+
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -46,5 +48,7 @@ self.addEventListener("activate", event => {
 });
 
 self.addEventListener("message", event => {
-  self.skipWaiting();
+  if(event.data.action == 'Update'){
+    self.skipWaiting();
+  }
 });
